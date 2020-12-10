@@ -6,7 +6,7 @@ const prizeMap = {
     0: {
         name: '01 Bịch Bánh Karamucho Xanh',
         minDegree: 0,
-        maxDegree:44
+        maxDegree: 44
     },
     1: {
         name: '01 Voucher Got It trị giá 30,000vnđ',
@@ -16,7 +16,7 @@ const prizeMap = {
     2: {
         name: '01 Bịch Bánh Karamucho Đỏ',
         minDegree: 90,
-        maxDegree:134
+        maxDegree: 134
     },
     3: {
         name: '01 Lon Bia Sapporo Premium 500ml',
@@ -46,12 +46,12 @@ const prizeMap = {
     8: {
         name: '01 Bịch Bánh Karamucho Xanh',
         minDegree: 0,
-        maxDegree:44
+        maxDegree: 44
     },
     9: {
         name: '01 Bịch Bánh Karamucho Đỏ',
         minDegree: 90,
-        maxDegree:134
+        maxDegree: 134
     },
     10: {
         name: '01 Lon Bia Sapporo Premium 500ml',
@@ -61,12 +61,12 @@ const prizeMap = {
     11: {
         name: '01 Bịch Bánh Karamucho Xanh',
         minDegree: 0,
-        maxDegree:44
+        maxDegree: 44
     },
     12: {
         name: '01 Bịch Bánh Karamucho Đỏ',
         minDegree: 90,
-        maxDegree:134
+        maxDegree: 134
     },
     13: {
         name: '01 Bịch Bánh Karamucho Xanh',
@@ -83,7 +83,7 @@ const prizeMap = {
 let theWheel = new Winwheel({
     'numSegments': 8,     // Specify number of segments.
     'drawMode': 'image',
-    'responsive'   : true,
+    'responsive': true,
     'drawText': false,
     'animation':           // Specify the animation to use.
     {
@@ -98,11 +98,10 @@ let theWheel = new Winwheel({
 let loadedImg = new Image(canvas.clientWidth, canvas.clientHeight);
 borderImg.style.top = '-95px'
 borderImg.style.left = '-84px'
-borderImg.style.width = `${canvas.clientWidth+170}px`;
-borderImg.style.height = `${canvas.clientHeight+170}px`;
+borderImg.style.width = `${canvas.clientWidth + 170}px`;
+borderImg.style.height = `${canvas.clientHeight + 170}px`;
 // Create callback to execute once the image has finished loading.
-loadedImg.onload = function()
-{
+loadedImg.onload = function () {
     theWheel.wheelImage = loadedImg;    // Make wheelImage equal the loaded image object.
     theWheel.draw();                    // Also call draw function to render the wheel.
 }
@@ -114,16 +113,14 @@ function handleButtonClick() {
 }
 
 billImageInput.addEventListener('change', async () => {
-    if($('#userInfoModal').css('display') === 'none'){
+    if ($('#userInfoModal').css('display') === 'none') {
         await startSpin();
     }
 })
 
 async function startSpin() {
-    const response = await fetch('http://sapwheel.ongdev.com/api/v1/getRandomItem', {
-            method: 'GET'
-        });
-        const jsonData = await response.json()
+    const response = await axios.get('http://sapwheel.ongdev.com/api/v1/getRandomItem');
+    const jsonData = await response.json()
     theWheel.stopAnimation(false);
     statusButton(2);
 
@@ -156,10 +153,10 @@ userInfoForm.onsubmit = async (e) => {
     let formData = new FormData(userInfoForm)
     formData.append('prize', prize)
     try {
-        const response = await axios.post('http://sapwheel.ongdev.com/api/v1/user', formData,{
+        const response = await axios.post('http://sapwheel.ongdev.com/api/v1/user', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
-              },
+            },
             cache: false
         })
         if (response.status === 500 || response.status === 406) {
