@@ -4,77 +4,77 @@ const billImageInput = document.getElementById('bill-image');
 let prize;
 const prizeMap = {
     0: {
-        name: '01 Bịch Bánh Karamucho Xanh',
+        name: 'xanh',
         minDegree: 0,
         maxDegree: 44
     },
     1: {
-        name: '01 Voucher Got It trị giá 30,000vnđ',
+        name: 'gotit',
         minDegree: 45,
         maxDegree: 89
     },
     2: {
-        name: '01 Bịch Bánh Karamucho Đỏ',
+        name: 'do',
         minDegree: 90,
         maxDegree: 134
     },
     3: {
-        name: '01 Lon Bia Sapporo Premium 500ml',
+        name: 'bia',
         minDegree: 135,
         maxDegree: 179
     },
     4: {
-        name: '01 Bịch Bánh Karamucho Xanh',
+        name: 'xanh',
         minDegree: 180,
         maxDegree: 224
     },
     5: {
-        name: '01 Voucher Got It trị giá 30,000vnđ',
+        name: 'gotit',
         minDegree: 225,
         maxDegree: 269
     },
     6: {
-        name: '01 Bịch Bánh Karamucho Đỏ',
+        name: 'do',
         minDegree: 270,
         maxDegree: 314
     },
     7: {
-        name: '01 Lon Bia Sapporo Premium 500ml',
+        name: 'bia',
         minDegree: 315,
         maxDegree: 359
     },
     8: {
-        name: '01 Bịch Bánh Karamucho Xanh',
+        name: 'xanh',
         minDegree: 0,
         maxDegree: 44
     },
     9: {
-        name: '01 Bịch Bánh Karamucho Đỏ',
+        name: 'do',
         minDegree: 90,
         maxDegree: 134
     },
     10: {
-        name: '01 Lon Bia Sapporo Premium 500ml',
+        name: 'bia',
         minDegree: 135,
         maxDegree: 179
     },
     11: {
-        name: '01 Bịch Bánh Karamucho Xanh',
+        name: 'xanh',
         minDegree: 0,
         maxDegree: 44
     },
     12: {
-        name: '01 Bịch Bánh Karamucho Đỏ',
+        name: 'do',
         minDegree: 90,
         maxDegree: 134
     },
     13: {
-        name: '01 Bịch Bánh Karamucho Xanh',
+        name: 'xanh',
         minDegree: 180,
         maxDegree: 224
     },
     14: {
-        name: '01 Bịch Bánh Karamucho Đỏ',
+        name: 'do',
         minDegree: 270,
         maxDegree: 314
     },
