@@ -162,8 +162,11 @@ function alertPrize() {
     $('#userInfoModal').modal()
 }
 
+document.getElementById('submitButton')
+
 userInfoForm.onsubmit = async (e) => {
     e.preventDefault();
+    document.getElementById('submitButton').disabled = true;
     let formData = new FormData(userInfoForm)
     formData.append('prize', prize)
     try {
@@ -178,11 +181,11 @@ userInfoForm.onsubmit = async (e) => {
         } else {
             alert("Gửi thông tin thành công")
         }
-        $('#userInfoModal').modal('hide')
-        statusButton(1);
     } catch (error) {
-        alert("Gửi thông tin không thành công")
+        alert("Gửi thông tin không thành công")       
+    } finally {
         $('#userInfoModal').modal('hide')
         statusButton(1);
+        document.getElementById('submitButton').disabled = false;
     }
 }
