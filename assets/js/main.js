@@ -120,11 +120,10 @@ billImageInput.addEventListener('change', async () => {
 
 async function startSpin() {
     const response = await axios.get('http://sapwheel.ongdev.com/api/v1/getRandomItem');
-    const jsonData = await response.json()
     theWheel.stopAnimation(false);
     statusButton(2);
 
-    theWheel.animation.stopAngle = jsonData.data;
+    theWheel.animation.stopAngle = response.data.data;
 
     // Start animation.
     theWheel.startAnimation();
