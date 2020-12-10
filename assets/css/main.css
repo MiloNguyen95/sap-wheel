@@ -1,3 +1,7 @@
+@font-face {
+    font-family: utm-bebas;
+    src: url(assets/fonts/utm-bebas.ttf);
+}
 body
 {
     font-family: arial;
@@ -11,6 +15,7 @@ h1, p
 
 h1 {
     font-size: 1.5em;
+    font-family: utm-bebas;
 }
 
 p {
