@@ -154,7 +154,7 @@ function statusButton(status) {
 statusButton(1);
 
 function alertPrize() {
-    let winningSegmentNumber = theWheel.getIndicatedSegmentNumber();
+    let winningSegmentNumber = theWheel.getIndicatedSegmentNumber() -1;
 
     const prizeText = prizeMap[winningSegmentNumber].name;
     prize = prizeText
