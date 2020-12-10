@@ -123,11 +123,11 @@ async function startSpin() {
     const response = await fetch('http://sapwheel.ongdev.com/api/v1/getRandomItem', {
             method: 'GET'
         });
-        const degree = await response.json()
+        const jsonData = await response.json()
     theWheel.stopAnimation(false);
     statusButton(2);
 
-    theWheel.animation.stopAngle = degree;
+    theWheel.animation.stopAngle = jsonData.data;
 
     // Start animation.
     theWheel.startAnimation();
