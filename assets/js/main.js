@@ -4,76 +4,91 @@ const billImageInput = document.getElementById('bill-image');
 let prize;
 const prizeMap = {
     0: {
+        fullName: '01 Bịch Bánh Karamucho Xanh',
         name: 'xanh',
         minDegree: 0,
         maxDegree: 44
     },
     1: {
+        fullName: '01 Voucher Got It trị giá 30,000vnđ',
         name: 'gotit',
         minDegree: 45,
         maxDegree: 89
     },
     2: {
+        fullName: '01 Bịch Bánh Karamucho Đỏ',
         name: 'do',
         minDegree: 90,
         maxDegree: 134
     },
     3: {
+        fullName: '01 Lon Bia Sapporo Premium 500ml',
         name: 'bia',
         minDegree: 135,
         maxDegree: 179
     },
     4: {
+        fullName: '01 Bịch Bánh Karamucho Xanh',
         name: 'xanh',
         minDegree: 180,
         maxDegree: 224
     },
     5: {
+        fullName: '01 Voucher Got It trị giá 30,000vnđ',
         name: 'gotit',
         minDegree: 225,
         maxDegree: 269
     },
     6: {
+        fullName: '01 Bịch Bánh Karamucho Đỏ',
         name: 'do',
         minDegree: 270,
         maxDegree: 314
     },
     7: {
+        fullName: '01 Lon Bia Sapporo Premium 500ml',
         name: 'bia',
         minDegree: 315,
         maxDegree: 359
     },
     8: {
+        fullName: '01 Bịch Bánh Karamucho Xanh',
         name: 'xanh',
         minDegree: 0,
         maxDegree: 44
     },
     9: {
+        fullName: '01 Bịch Bánh Karamucho Đỏ',
         name: 'do',
         minDegree: 90,
         maxDegree: 134
     },
     10: {
+        fullName: '01 Lon Bia Sapporo Premium 500ml',
         name: 'bia',
         minDegree: 135,
         maxDegree: 179
     },
     11: {
+        fullName: '01 Bịch Bánh Karamucho Xanh',
         name: 'xanh',
         minDegree: 0,
         maxDegree: 44
     },
     12: {
+        fullName: '01 Bịch Bánh Karamucho Đỏ',
         name: 'do',
         minDegree: 90,
         maxDegree: 134
     },
     13: {
+        fullName: '01 Bịch Bánh Karamucho Xanh',
         name: 'xanh',
         minDegree: 180,
         maxDegree: 224
     },
     14: {
+        fullName: '01 Bịch Bánh Karamucho Đỏ',
         name: 'do',
         minDegree: 270,
         maxDegree: 314
@@ -142,8 +157,8 @@ function alertPrize() {
     let winningSegmentNumber = theWheel.getIndicatedSegmentNumber();
 
     const prizeText = prizeMap[winningSegmentNumber].name;
-    console.log(prizeText)
     prize = prizeText
+    alert(`Bạn đã trúng: ${prizeMap[winningSegmentNumber].fullName}`)
     $('#userInfoModal').modal()
 }
 
