@@ -104,7 +104,7 @@ let theWheel = new Winwheel({
     {
         'type': 'spinToStop',
         'duration': 10,     // Duration in seconds.
-        'spins': 8,     // Number of complete spins.
+        'spins': 16,     // Number of complete spins.
         'callbackFinished': alertPrize
     }
 });
