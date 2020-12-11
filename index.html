@@ -15,9 +15,12 @@
     />
   </head>
   <body style="background-image: url('/assets/img/bg.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;">
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-direction: column; min-height: 100vh;">
-        <h1 style="text-align: center;margin-top: 30px; color: #f2f2f2;text-shadow: 2px 2px #000;">Mừng khai trương Aeon Mall Hải Phòng<br/>
-          ƯU ĐÃI BẤT NGỜ - NIỀM VUI NHÂN ĐÔI</h1>
+      <div style="position: relative; ;display: flex; justify-content: space-between; align-items: center; flex-direction: column; min-height: 100vh;">
+        <h1 style="text-align: center;margin-top: 30px; font-weight: bolder;background: linear-gradient( 
+          to right, #e2bc62, #db6d34); -webkit-text-stroke: 0.5px #333333; 
+      -webkit-text-fill-color: transparent; 
+      -webkit-background-clip: text;">MỪNG KHAI TRƯƠNG AEON MALL HẢI PHÒNG<br/>
+          <span style="font-size: 3rem;">ƯU ĐÃI BẤT NGỜ - NIỀM VUI NHÂN ĐÔI</span></h1>
         <div style="position: relative; width: fit-content;" align="center">
           <canvas id="canvas" width="300" height="300" data-responsiveMinWidth="180" data-responsiveScaleHeight="true" onClick="startSpin();">
           </canvas>
@@ -29,6 +32,7 @@
             Vui lòng chụp hóa đơn mua hàng để bắt đầu
           </button>
         </div>
+        <div style="position: absolute;left: 0; right: 0; bottom: 0; top: 0; background-color: #000; z-index: -1; opacity: 0.3;"></div>
       </div>
       <div
       class="modal fade"

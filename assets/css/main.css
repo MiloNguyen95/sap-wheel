@@ -21,3 +21,25 @@ h1 {
 p {
     font-size: 0.8em;
 }
+
+button {
+    color: #333333 !important;
+    background: linear-gradient( 
+            to right, #e2bc62, #db6d34) !important; 
+            border: none !important;
+}
+
+button:active {
+    border: none !important;
+}
+
+button:focus {
+    border: none !important;
+    box-shadow: none;
+}
+
+button:disabled {
+    background: linear-gradient( 
+            to right, lightgrey, grey) !important; 
+            border: none !important;
+}
