@@ -1,5 +1,6 @@
 const canvas = document.getElementById('canvas');
 const borderImg = document.getElementById('borderImg');
+const logoImg = document.getElementById('logoImg');
 const billImageInput = document.getElementById('bill-image');
 let prize;
 const prizeMap = {
@@ -115,6 +116,12 @@ borderImg.style.top = '-95px'
 borderImg.style.left = '-84px'
 borderImg.style.width = `${canvas.clientWidth + 170}px`;
 borderImg.style.height = `${canvas.clientHeight + 170}px`;
+
+
+logoImg.style.width = `${canvas.clientWidth/3}px`;
+logoImg.style.height = `${canvas.clientWidth/3}px`;
+logoImg.style.top = `${canvas.clientWidth/3}px`;
+logoImg.style.left = `${canvas.clientWidth/3}px`;
 // Create callback to execute once the image has finished loading.
 loadedImg.onload = function () {
     theWheel.wheelImage = loadedImg;    // Make wheelImage equal the loaded image object.
